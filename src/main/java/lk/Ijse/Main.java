@@ -12,6 +12,7 @@ public class Main {
         FullName fullName=new FullName("malith","Rashmika");
         Student student=new Student();
 
+        //SAVE
 //        student.setId(1);
 //        student.setName(fullName);
 //        student.setAddress("mathugama");
@@ -22,7 +23,7 @@ public class Main {
 //        transaction.commit();
 //        session.close();
 
-
+          //UPDATE
 //        student.setId(1);
 //        student.setName(fullName);
 //        student.setAddress("mathugama");
@@ -33,23 +34,26 @@ public class Main {
 //        transaction.commit();
 //        session.close();
 
-        student.setId(1);
-        student.setName(fullName);
-        student.setAddress("mathugama");
-        //open transaction
-        Transaction transaction=session.beginTransaction();
-        session.delete(student);
-        //delete,get,another table,note
-        transaction.commit();
-        session.close();
-
+          //DELETE
 //        student.setId(1);
 //        student.setName(fullName);
 //        student.setAddress("mathugama");
 //        //open transaction
 //        Transaction transaction=session.beginTransaction();
-//        session.save(student);
+//        session.delete(student);
 //        //delete,get,another table,note
 //        transaction.commit();
+//        session.close();
+
+
+        //GET
+        student=session.get(Student.class,2);
+        System.out.println("ID : "+student.getId());
+        System.out.println("Name : "+student.getName());
+        System.out.println("Address : "+student.getAddress());
+
+        session.close();
+
+        //ANOTHER TABLE
     }
 }
