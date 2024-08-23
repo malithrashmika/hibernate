@@ -23,25 +23,25 @@ public class Main {
 //        session.close();
 
 
-        student.setId(1);
-        student.setName(fullName);
-        student.setAddress("mathugama");
-        //open transaction
-        Transaction transaction=session.beginTransaction();
-        session.update(student);
-        //delete,get,another table,note
-        transaction.commit();
-        session.close();
-
 //        student.setId(1);
 //        student.setName(fullName);
 //        student.setAddress("mathugama");
 //        //open transaction
 //        Transaction transaction=session.beginTransaction();
-//        session.delete(student);
+//        session.update(student);
 //        //delete,get,another table,note
 //        transaction.commit();
 //        session.close();
+
+        student.setId(1);
+        student.setName(fullName);
+        student.setAddress("mathugama");
+        //open transaction
+        Transaction transaction=session.beginTransaction();
+        session.delete(student);
+        //delete,get,another table,note
+        transaction.commit();
+        session.close();
 
 //        student.setId(1);
 //        student.setName(fullName);
